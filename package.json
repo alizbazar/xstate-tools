@@ -1,0 +1,9 @@
+{
+  "name": "statechart-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "xstate": "^4.6.7"
+  }
+}
