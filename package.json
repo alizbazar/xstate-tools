@@ -7,6 +7,15 @@
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.6.0",
+    "rollup": "^1.21.2",
+    "rollup-plugin-includepaths": "^0.2.3",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.2",
     "xstate": "^4.6.7"
+  },
+  "bin": {
+    "viz": "./lib/visualize.js"
   }
 }
