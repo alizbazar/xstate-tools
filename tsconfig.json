@@ -3,10 +3,11 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "noImplicitReturns": true,
+    "outDir": "lib",
     "sourceMap": true,
     "strict": true,
     "target": "es2015"
   },
   "compileOnSave": true,
-  "exclude": ["scripts/"]
+  "include": ["src"]
 }
