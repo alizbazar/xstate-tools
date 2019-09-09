@@ -2,9 +2,13 @@
   "name": "xstate-tools",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "yarn build && node scripts/prepublish.js && npm publish lib/"
   },
   "main": "lib/index.js",
+  "author": {
+    "name": "Albert Nazander"
+  },
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.6.0",
@@ -15,6 +19,7 @@
     "typescript": "^3.6.2",
     "xstate": "^4.6.7"
   },
+  "private": true,
   "bin": {
     "viz": "./lib/visualize.js"
   }
