@@ -7,7 +7,7 @@ const fs = require('fs')
 
 const getFileInfo = () => {
   const fileArg = path.resolve(process.cwd(), process.argv[2])
-  const parts = fileArg.match('^(.+?).(?:viz.)?([tj]s)$')!
+  const parts = fileArg.match(/^(.+?)\.(?:viz\.)?([tj]s)$/)!
   parts.shift()
   const [filename, extension] = parts
 
