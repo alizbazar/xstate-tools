@@ -3,6 +3,7 @@ const rollup = require('rollup')
 const includePaths = require('rollup-plugin-includepaths')
 const path = require('path')
 const typescript = require('rollup-plugin-typescript')
+const fs = require('fs')
 
 const getFileInfo = () => {
   const fileArg = path.resolve(process.cwd(), process.argv[2])
@@ -10,8 +11,15 @@ const getFileInfo = () => {
   parts.shift()
   const [filename, extension] = parts
 
-  const visualization = `${filename}.viz.${extension}`
+  let visualization = `${filename}.viz.${extension}`
   const machine = `${filename}.${extension}`
+
+  try {
+    fs.accessSync(visualization, fs.constants.R_OK)
+  } catch (err) {
+    visualization = machine
+  }
+
   return {
     visualization,
     machine,
